@@ -18,9 +18,17 @@ Requisitos: Node.js, AWS CDK v2 y credenciales AWS con permisos para VPC, EC2, E
 ```bash
 npm install
 aws sts get-caller-identity
-cdk bootstrap aws://ACCOUNT_ID/eu-west-1
+cdk bootstrap aws:///eu-west-1
 npm run synth
-npm run deploy
+npm run deploy --profile cdk-personal
 ```
 
 La instancia está en una subred pública y el puerto SSH/22 está abierto a Internet (`0.0.0.0/0` y `::/0`). El key pair `onyx_ec2` debe existir previamente en `eu-west-1` y ser compatible con la AMI ARM64. Por seguridad, es preferible sustituir estas reglas por la IP pública fija de administración o usar SSM/VPN.
+
+Para ejecutar onyx, conectar al SSH de la EC2 y ejecutar: 
+curl -fsSL https://onyx.app/install_onyx.sh | bash
+
+fallará el nginx en la configuracion del MCP, ir al deployment:
+cd 
+editar .env y desabilitar el MCP
+de nuevo onyx-cli deploy install, y seleccionas restart
