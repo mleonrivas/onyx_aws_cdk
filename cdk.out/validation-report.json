@@ -1,0 +1,65 @@
+{
+  "version": "55.0.0",
+  "title": "Validation Report",
+  "pluginReports": [
+    {
+      "pluginName": "CloudFormation Validate",
+      "pluginVersion": "1.14.0",
+      "conclusion": "success",
+      "violations": [
+        {
+          "ruleName": "W2508",
+          "description": "SecurityGroupIngress: Security group allows 0.0.0.0/0 access to sensitive port 22 (range 22-22)",
+          "suggestedFix": "Restrict the CIDR range to specific IP addresses",
+          "severity": "warning",
+          "ruleMetadata": {
+            "category": "Security"
+          },
+          "violatingConstructs": [
+            {
+              "constructPath": "RagMytoslabStack/InstanceSecurityGroup/Resource",
+              "constructFqn": "aws-cdk-lib.aws_ec2.CfnSecurityGroup",
+              "libraryVersion": "2.277.0",
+              "cloudFormationResource": {
+                "templatePath": "RagMytoslabStack.template.json",
+                "logicalId": "InstanceSecurityGroup896E10BF",
+                "propertyPaths": [
+                  "Properties.SecurityGroupIngress"
+                ]
+              },
+              "stackTraces": [
+                "...new SecurityGroup2 in aws-cdk-lib...\nnew RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:47:24)\n<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)\n...node internals, ts-node, ts-node..."
+              ]
+            }
+          ]
+        },
+        {
+          "ruleName": "W2508",
+          "description": "SecurityGroupIngress: Security group allows ::/0 access to sensitive port 22 (range 22-22)",
+          "suggestedFix": "Restrict the CIDR range to specific IP addresses",
+          "severity": "warning",
+          "ruleMetadata": {
+            "category": "Security"
+          },
+          "violatingConstructs": [
+            {
+              "constructPath": "RagMytoslabStack/InstanceSecurityGroup/Resource",
+              "constructFqn": "aws-cdk-lib.aws_ec2.CfnSecurityGroup",
+              "libraryVersion": "2.277.0",
+              "cloudFormationResource": {
+                "templatePath": "RagMytoslabStack.template.json",
+                "logicalId": "InstanceSecurityGroup896E10BF",
+                "propertyPaths": [
+                  "Properties.SecurityGroupIngress"
+                ]
+              },
+              "stackTraces": [
+                "...new SecurityGroup2 in aws-cdk-lib...\nnew RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:47:24)\n<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)\n...node internals, ts-node, ts-node..."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

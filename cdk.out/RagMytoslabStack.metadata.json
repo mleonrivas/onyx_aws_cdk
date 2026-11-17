@@ -1,0 +1,577 @@
+{
+  "/RagMytoslabStack": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:acknowledged-rules",
+      "data": {
+        "CloudFormation-Validate::W3010": "Literal AZs in template are the result of accessing stack.availabilityZones, this is expected and safe"
+      },
+      "trace": [
+        "    ...new Vpc2 in aws-cdk-lib...",
+        "    at new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:19:17)",
+        "    at <anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "    ...node internals, ts-node..."
+      ]
+    },
+    {
+      "type": "aws:cdk:templateFile",
+      "data": "RagMytoslabStack.template.json"
+    }
+  ],
+  "/RagMytoslabStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--al2023-ami-kernel-6.1-arm64:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SsmParameterValueawsserviceamiamazonlinuxlatestal2023amikernel61arm64C96584B6F00A464EAD1953AFF4B05118Parameter"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Instance2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:59:22)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)"
+      ]
+    }
+  ],
+  "/RagMytoslabStack/AlbDnsName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AlbDnsName"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:131:5)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/InstanceId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "InstanceId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:132:5)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/ApplicationUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApplicationUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:133:5)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/RagMytoslabStack/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcF255D156"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Vpc2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:19:17)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/IGW": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcIGW99FB4ADC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Vpc2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:19:17)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/VPCGW": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcVPCGWC32343EC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Vpc2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:19:17)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/AlbSecurityGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AlbSecurityGroup86A59E99"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new SecurityGroup2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:37:19)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/InstanceSecurityGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "InstanceSecurityGroup896E10BF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new SecurityGroup2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:47:24)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/InstanceSecurityGroup/from RagMytoslabStackAlbSecurityGroupF7BCF5A3:80": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "InstanceSecurityGroupfromRagMytoslabStackAlbSecurityGroupF7BCF5A3800991B8B4"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.<anonymous> in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:52:16)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/InstanceSecurityGroup/from RagMytoslabStackAlbSecurityGroupF7BCF5A3:443": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "InstanceSecurityGroupfromRagMytoslabStackAlbSecurityGroupF7BCF5A344371F8DF01"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.<anonymous> in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:53:16)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagInstance/InstanceProfile": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagInstanceInstanceProfile663BFF42"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Instance2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:59:22)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagInstance/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagInstance4AE3D960"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Instance2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:59:22)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagInstance/LaunchTemplate": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagInstanceLaunchTemplate9D8C4044"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagCertificate/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagCertificateF6BAC0E1"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Certificate2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:81:25)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagAlb/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagAlb0C95DF8B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new ApplicationLoadBalancer2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:87:17)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagTargetGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagTargetGroupFA6A57CA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new ApplicationTargetGroup2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:94:25)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagAliasRecord/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagAliasRecord49004E44"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new ARecord2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:125:5)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PublicSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPublicSubnet1Subnet209796E6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PublicSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPublicSubnet1RouteTableDB7537E2"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PublicSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPublicSubnet1RouteTableAssociation0FD38936"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PublicSubnet1/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPublicSubnet1DefaultRoute9493D1F8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:229 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...new Vpc2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:19:17)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PublicSubnet2/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPublicSubnet2SubnetEE81B6EA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PublicSubnet2/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPublicSubnet2RouteTable58EC0669"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PublicSubnet2/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPublicSubnet2RouteTableAssociationE5668575"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:291 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PublicSubnet2/DefaultRoute": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPublicSubnet2DefaultRoute590EE9EC"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:229 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...new Vpc2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:19:17)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PrivateIsolatedSubnet1/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPrivateIsolatedSubnet1Subnet474AB7FF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:295 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PrivateIsolatedSubnet1/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPrivateIsolatedSubnet1RouteTable49D295E6"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:295 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PrivateIsolatedSubnet1/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPrivateIsolatedSubnet1RouteTableAssociation529E83D8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:295 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PrivateIsolatedSubnet2/Subnet": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPrivateIsolatedSubnet2Subnet90F7EB98"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:295 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PrivateIsolatedSubnet2/RouteTable": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPrivateIsolatedSubnet2RouteTable002C030E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:295 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagVpc/PrivateIsolatedSubnet2/RouteTableAssociation": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagVpcPrivateIsolatedSubnet2RouteTableAssociation1C8EBDDF"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        ".../Users/mleon/Documents/Codex/2026-11-17/pued/node_modules/aws-cdk-lib/aws-ec2/lib/vpc.js:1:295 in aws-cdk-lib...",
+        "Array.forEach (:)",
+        "...aws-cdk-lib..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagInstance/InstanceRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagInstanceInstanceRoleA442B96D"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...new Instance2 in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:59:22)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals, ts-node..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagAlb/HttpsListener/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagAlbHttpsListener5A930028"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.<anonymous> in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:108:9)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals..."
+      ]
+    }
+  ],
+  "/RagMytoslabStack/RagAlb/HttpRedirectListener/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "RagAlbHttpRedirectListener93A72928"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...PropertyInjectable.<anonymous> in aws-cdk-lib...",
+        "new RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:115:9)",
+        "<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)",
+        "...node internals..."
+      ]
+    }
+  ]
+}

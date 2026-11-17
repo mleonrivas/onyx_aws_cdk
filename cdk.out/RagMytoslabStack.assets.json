@@ -1,0 +1,21 @@
+{
+  "version": "55.0.0",
+  "files": {
+    "820daaa89ebfe3765c4f86f67eb5d962369314b289908909cada8953c1330c69": {
+      "displayName": "RagMytoslabStack Template",
+      "source": {
+        "path": "RagMytoslabStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "016197522369-eu-west-1-fc1e40cf": {
+          "bucketName": "cdk-hnb659fds-assets-016197522369-eu-west-1",
+          "objectKey": "820daaa89ebfe3765c4f86f67eb5d962369314b289908909cada8953c1330c69.json",
+          "region": "eu-west-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::016197522369:role/cdk-hnb659fds-file-publishing-role-016197522369-eu-west-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

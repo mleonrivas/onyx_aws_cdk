@@ -1,0 +1,811 @@
+{
+ "Resources": {
+  "RagVpcF255D156": {
+   "Type": "AWS::EC2::VPC",
+   "Properties": {
+    "CidrBlock": "10.42.0.0/16",
+    "EnableDnsHostnames": true,
+    "EnableDnsSupport": true,
+    "InstanceTenancy": "default",
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/Resource"
+   }
+  },
+  "RagVpcPublicSubnet1Subnet209796E6": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1a",
+    "CidrBlock": "10.42.0.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc/PublicSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PublicSubnet1/Subnet"
+   }
+  },
+  "RagVpcPublicSubnet1RouteTableDB7537E2": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc/PublicSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PublicSubnet1/RouteTable"
+   }
+  },
+  "RagVpcPublicSubnet1RouteTableAssociation0FD38936": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "RagVpcPublicSubnet1RouteTableDB7537E2"
+    },
+    "SubnetId": {
+     "Ref": "RagVpcPublicSubnet1Subnet209796E6"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PublicSubnet1/RouteTableAssociation"
+   }
+  },
+  "RagVpcPublicSubnet1DefaultRoute9493D1F8": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "RagVpcIGW99FB4ADC"
+    },
+    "RouteTableId": {
+     "Ref": "RagVpcPublicSubnet1RouteTableDB7537E2"
+    }
+   },
+   "DependsOn": [
+    "RagVpcVPCGWC32343EC"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PublicSubnet1/DefaultRoute"
+   }
+  },
+  "RagVpcPublicSubnet2SubnetEE81B6EA": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1b",
+    "CidrBlock": "10.42.1.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc/PublicSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PublicSubnet2/Subnet"
+   }
+  },
+  "RagVpcPublicSubnet2RouteTable58EC0669": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc/PublicSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PublicSubnet2/RouteTable"
+   }
+  },
+  "RagVpcPublicSubnet2RouteTableAssociationE5668575": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "RagVpcPublicSubnet2RouteTable58EC0669"
+    },
+    "SubnetId": {
+     "Ref": "RagVpcPublicSubnet2SubnetEE81B6EA"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PublicSubnet2/RouteTableAssociation"
+   }
+  },
+  "RagVpcPublicSubnet2DefaultRoute590EE9EC": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "RagVpcIGW99FB4ADC"
+    },
+    "RouteTableId": {
+     "Ref": "RagVpcPublicSubnet2RouteTable58EC0669"
+    }
+   },
+   "DependsOn": [
+    "RagVpcVPCGWC32343EC"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PublicSubnet2/DefaultRoute"
+   }
+  },
+  "RagVpcPrivateIsolatedSubnet1Subnet474AB7FF": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1a",
+    "CidrBlock": "10.42.2.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "PrivateIsolated"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet1/Subnet"
+   }
+  },
+  "RagVpcPrivateIsolatedSubnet1RouteTable49D295E6": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet1/RouteTable"
+   }
+  },
+  "RagVpcPrivateIsolatedSubnet1RouteTableAssociation529E83D8": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "RagVpcPrivateIsolatedSubnet1RouteTable49D295E6"
+    },
+    "SubnetId": {
+     "Ref": "RagVpcPrivateIsolatedSubnet1Subnet474AB7FF"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet1/RouteTableAssociation"
+   }
+  },
+  "RagVpcPrivateIsolatedSubnet2Subnet90F7EB98": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1b",
+    "CidrBlock": "10.42.3.0/24",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "PrivateIsolated"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Isolated"
+     },
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet2/Subnet"
+   }
+  },
+  "RagVpcPrivateIsolatedSubnet2RouteTable002C030E": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet2/RouteTable"
+   }
+  },
+  "RagVpcPrivateIsolatedSubnet2RouteTableAssociation1C8EBDDF": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "RagVpcPrivateIsolatedSubnet2RouteTable002C030E"
+    },
+    "SubnetId": {
+     "Ref": "RagVpcPrivateIsolatedSubnet2Subnet90F7EB98"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/PrivateIsolatedSubnet2/RouteTableAssociation"
+   }
+  },
+  "RagVpcIGW99FB4ADC": {
+   "Type": "AWS::EC2::InternetGateway",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagVpc"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/IGW"
+   }
+  },
+  "RagVpcVPCGWC32343EC": {
+   "Type": "AWS::EC2::VPCGatewayAttachment",
+   "Properties": {
+    "InternetGatewayId": {
+     "Ref": "RagVpcIGW99FB4ADC"
+    },
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagVpc/VPCGW"
+   }
+  },
+  "AlbSecurityGroup86A59E99": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Allow public HTTPS traffic to the ALB",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Public HTTPS",
+      "FromPort": 443,
+      "IpProtocol": "tcp",
+      "ToPort": 443
+     },
+     {
+      "CidrIpv6": "::/0",
+      "Description": "Public HTTPS IPv6",
+      "FromPort": 443,
+      "IpProtocol": "tcp",
+      "ToPort": 443
+     },
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "HTTP redirect to HTTPS",
+      "FromPort": 80,
+      "IpProtocol": "tcp",
+      "ToPort": 80
+     },
+     {
+      "CidrIpv6": "::/0",
+      "Description": "HTTP redirect to HTTPS IPv6",
+      "FromPort": 80,
+      "IpProtocol": "tcp",
+      "ToPort": 80
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/AlbSecurityGroup/Resource"
+   }
+  },
+  "InstanceSecurityGroup896E10BF": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Allow web traffic only from the ALB",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Public SSH IPv4",
+      "FromPort": 22,
+      "IpProtocol": "tcp",
+      "ToPort": 22
+     },
+     {
+      "CidrIpv6": "::/0",
+      "Description": "Public SSH IPv6",
+      "FromPort": 22,
+      "IpProtocol": "tcp",
+      "ToPort": 22
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/InstanceSecurityGroup/Resource"
+   }
+  },
+  "InstanceSecurityGroupfromRagMytoslabStackAlbSecurityGroupF7BCF5A3800991B8B4": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "HTTP from ALB",
+    "FromPort": 80,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "InstanceSecurityGroup896E10BF",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "AlbSecurityGroup86A59E99",
+      "GroupId"
+     ]
+    },
+    "ToPort": 80
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/InstanceSecurityGroup/from RagMytoslabStackAlbSecurityGroupF7BCF5A3:80"
+   }
+  },
+  "InstanceSecurityGroupfromRagMytoslabStackAlbSecurityGroupF7BCF5A344371F8DF01": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "HTTPS from ALB",
+    "FromPort": 443,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "InstanceSecurityGroup896E10BF",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "AlbSecurityGroup86A59E99",
+      "GroupId"
+     ]
+    },
+    "ToPort": 443
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/InstanceSecurityGroup/from RagMytoslabStackAlbSecurityGroupF7BCF5A3:443"
+   }
+  },
+  "RagInstanceInstanceRoleA442B96D": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ec2.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagInstance"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagInstance/InstanceRole/Resource"
+   }
+  },
+  "RagInstanceInstanceProfile663BFF42": {
+   "Type": "AWS::IAM::InstanceProfile",
+   "Properties": {
+    "Roles": [
+     {
+      "Ref": "RagInstanceInstanceRoleA442B96D"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagInstance/InstanceProfile"
+   }
+  },
+  "RagInstance4AE3D960": {
+   "Type": "AWS::EC2::Instance",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1a",
+    "BlockDeviceMappings": [
+     {
+      "DeviceName": "/dev/xvda",
+      "Ebs": {
+       "DeleteOnTermination": true,
+       "Encrypted": true,
+       "VolumeSize": 36,
+       "VolumeType": "gp3"
+      }
+     }
+    ],
+    "IamInstanceProfile": {
+     "Ref": "RagInstanceInstanceProfile663BFF42"
+    },
+    "ImageId": {
+     "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestal2023amikernel61arm64C96584B6F00A464EAD1953AFF4B05118Parameter"
+    },
+    "InstanceType": "m7g.xlarge",
+    "KeyName": "onyx_ec2",
+    "LaunchTemplate": {
+     "LaunchTemplateName": "RagMytoslabStackRagInstanceLaunchTemplate0A064B47",
+     "Version": {
+      "Fn::GetAtt": [
+       "RagInstanceLaunchTemplate9D8C4044",
+       "LatestVersionNumber"
+      ]
+     }
+    },
+    "SecurityGroupIds": [
+     {
+      "Fn::GetAtt": [
+       "InstanceSecurityGroup896E10BF",
+       "GroupId"
+      ]
+     }
+    ],
+    "SubnetId": {
+     "Ref": "RagVpcPublicSubnet1Subnet209796E6"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagInstance"
+     }
+    ],
+    "UserData": {
+     "Fn::Base64": "#!/bin/bash"
+    }
+   },
+   "DependsOn": [
+    "RagInstanceInstanceRoleA442B96D"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagInstance/Resource"
+   }
+  },
+  "RagInstanceLaunchTemplate9D8C4044": {
+   "Type": "AWS::EC2::LaunchTemplate",
+   "Properties": {
+    "LaunchTemplateData": {
+     "MetadataOptions": {
+      "HttpTokens": "required"
+     }
+    },
+    "LaunchTemplateName": "RagMytoslabStackRagInstanceLaunchTemplate0A064B47"
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagInstance/LaunchTemplate"
+   }
+  },
+  "RagCertificateF6BAC0E1": {
+   "Type": "AWS::CertificateManager::Certificate",
+   "Properties": {
+    "CertificateTransparencyLoggingPreference": "ENABLED",
+    "DomainName": "rag.mytoslab.com",
+    "DomainValidationOptions": [
+     {
+      "DomainName": "rag.mytoslab.com",
+      "HostedZoneId": "Z02677451QN32TIP1BSP0"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "RagMytoslabStack/RagCertificate"
+     }
+    ],
+    "ValidationMethod": "DNS"
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagCertificate/Resource"
+   }
+  },
+  "RagAlb0C95DF8B": {
+   "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "Properties": {
+    "LoadBalancerAttributes": [
+     {
+      "Key": "deletion_protection.enabled",
+      "Value": "false"
+     }
+    ],
+    "Scheme": "internet-facing",
+    "SecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "AlbSecurityGroup86A59E99",
+       "GroupId"
+      ]
+     }
+    ],
+    "Subnets": [
+     {
+      "Ref": "RagVpcPublicSubnet1Subnet209796E6"
+     },
+     {
+      "Ref": "RagVpcPublicSubnet2SubnetEE81B6EA"
+     }
+    ],
+    "Type": "application"
+   },
+   "DependsOn": [
+    "RagVpcPublicSubnet1DefaultRoute9493D1F8",
+    "RagVpcPublicSubnet1RouteTableAssociation0FD38936",
+    "RagVpcPublicSubnet2DefaultRoute590EE9EC",
+    "RagVpcPublicSubnet2RouteTableAssociationE5668575"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagAlb/Resource"
+   }
+  },
+  "RagAlbHttpsListener5A930028": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "Certificates": [
+     {
+      "CertificateArn": {
+       "Ref": "RagCertificateF6BAC0E1"
+      }
+     }
+    ],
+    "DefaultActions": [
+     {
+      "TargetGroupArn": {
+       "Ref": "RagTargetGroupFA6A57CA"
+      },
+      "Type": "forward"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "RagAlb0C95DF8B"
+    },
+    "Port": 443,
+    "Protocol": "HTTPS"
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagAlb/HttpsListener/Resource"
+   }
+  },
+  "RagAlbHttpRedirectListener93A72928": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "DefaultActions": [
+     {
+      "RedirectConfig": {
+       "Port": "443",
+       "Protocol": "HTTPS",
+       "StatusCode": "HTTP_301"
+      },
+      "Type": "redirect"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "RagAlb0C95DF8B"
+    },
+    "Port": 80,
+    "Protocol": "HTTP"
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagAlb/HttpRedirectListener/Resource"
+   }
+  },
+  "RagTargetGroupFA6A57CA": {
+   "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "Properties": {
+    "HealthCheckPath": "/",
+    "HealthCheckPort": "80",
+    "HealthCheckProtocol": "HTTP",
+    "Matcher": {
+     "HttpCode": "200-399"
+    },
+    "Port": 80,
+    "Protocol": "HTTP",
+    "TargetGroupAttributes": [
+     {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+     }
+    ],
+    "TargetType": "instance",
+    "Targets": [
+     {
+      "Id": {
+       "Ref": "RagInstance4AE3D960"
+      },
+      "Port": 80
+     }
+    ],
+    "VpcId": {
+     "Ref": "RagVpcF255D156"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagTargetGroup/Resource"
+   }
+  },
+  "RagAliasRecord49004E44": {
+   "Type": "AWS::Route53::RecordSet",
+   "Properties": {
+    "AliasTarget": {
+     "DNSName": {
+      "Fn::Join": [
+       "",
+       [
+        "dualstack.",
+        {
+         "Fn::GetAtt": [
+          "RagAlb0C95DF8B",
+          "DNSName"
+         ]
+        }
+       ]
+      ]
+     },
+     "HostedZoneId": {
+      "Fn::GetAtt": [
+       "RagAlb0C95DF8B",
+       "CanonicalHostedZoneID"
+      ]
+     }
+    },
+    "HostedZoneId": "Z02677451QN32TIP1BSP0",
+    "Name": "rag.mytoslab.com.",
+    "Type": "A"
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/RagAliasRecord/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/31Qy27CMBD8lt6NW4JazpQDQkJqFBDXauMsYcFZR/YahKL8e5XwSE497czs7DPRyXyuP97gGiamOE8s5brZCpizyjC46A0quIbfBk2im31t1PLA+3Sp0phbMtuYM0qnDShzUXAHucVBH7RFCM4QCDl+mVXq6QKCQ481C3pGWYHgFW6PoQ+2EAFzrJBFbdFET3JbeRfrfty/wppLjyGoNQcBNngfNeANRDbHHVa1BcFWEVS6ydz9kmd8FqTeHchiqwx6oQMZEKyAoUSvm+WgdTUj2iq0EISMdVDkYIENcXlJdLOoa9tZyPHGQfHd59D3i4352EdBkB+eJx7ld+BLlNczRrRVvnv950w3iwyN80V/Y4+2KG3b0RQ8VCj3/j9R6iitYlegPoX3S/KlpzM9fTsFoomPLFShzu7xD9wqlnVYAgAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "RagMytoslabStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Parameters": {
+  "SsmParameterValueawsserviceamiamazonlinuxlatestal2023amikernel61arm64C96584B6F00A464EAD1953AFF4B05118Parameter": {
+   "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+   "Default": "/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-6.1-arm64"
+  },
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Outputs": {
+  "AlbDnsName": {
+   "Value": {
+    "Fn::GetAtt": [
+     "RagAlb0C95DF8B",
+     "DNSName"
+    ]
+   }
+  },
+  "InstanceId": {
+   "Value": {
+    "Ref": "RagInstance4AE3D960"
+   }
+  },
+  "ApplicationUrl": {
+   "Value": "https://rag.mytoslab.com"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}
