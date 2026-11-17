@@ -61,8 +61,8 @@ export class RagMytoslabStack extends cdk.Stack {
       vpcSubnets: { subnetType: ec2.SubnetType.PUBLIC },
       instanceType: new ec2.InstanceType('m7g.xlarge'),
       keyPair,
-      machineImage: ec2.MachineImage.latestAmazonLinux2023({
-        cpuType: ec2.AmazonLinuxCpuType.ARM_64
+      machineImage: ec2.MachineImage.genericLinux({
+        'eu-west-1': 'ami-08bcf9ecb63f6b644'
       }),
       securityGroup: instanceSg,
       blockDevices: [

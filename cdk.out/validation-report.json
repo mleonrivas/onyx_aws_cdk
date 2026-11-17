@@ -28,7 +28,7 @@
                 ]
               },
               "stackTraces": [
-                "...new SecurityGroup2 in aws-cdk-lib...\nnew RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:47:24)\n<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)\n...node internals, ts-node, ts-node..."
+                "...new SecurityGroup2 in aws-cdk-lib...\nnew RagMytoslabStack (/Users/mleon/CAI_WS/onyx_aws_cdk/lib/rag-mytoslab-stack.ts:47:24)\n<anonymous> (/Users/mleon/CAI_WS/onyx_aws_cdk/bin/rag-mytoslab.ts:7:1)\n...node internals, ts-node, ts-node..."
               ]
             }
           ]
@@ -54,7 +54,7 @@
                 ]
               },
               "stackTraces": [
-                "...new SecurityGroup2 in aws-cdk-lib...\nnew RagMytoslabStack (/Users/mleon/Documents/Codex/2026-11-17/pued/lib/rag-mytoslab-stack.ts:47:24)\n<anonymous> (/Users/mleon/Documents/Codex/2026-11-17/pued/bin/rag-mytoslab.ts:7:1)\n...node internals, ts-node, ts-node..."
+                "...new SecurityGroup2 in aws-cdk-lib...\nnew RagMytoslabStack (/Users/mleon/CAI_WS/onyx_aws_cdk/lib/rag-mytoslab-stack.ts:47:24)\n<anonymous> (/Users/mleon/CAI_WS/onyx_aws_cdk/bin/rag-mytoslab.ts:7:1)\n...node internals, ts-node, ts-node..."
               ]
             }
           ]
